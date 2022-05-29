@@ -1,0 +1,190 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+
+        <div style="display: flex;
+        justify-content: space-between;
+        align-items: center;">
+            <ion-buttons>
+                <ion-menu-button>
+                    <ion-icon name="menu" color="dark"></ion-icon>
+                    <!-- <img src="../../assets/icon/tog-menu-icn.png" alt=""> -->
+                </ion-menu-button>
+            </ion-buttons>
+
+            <ion-title style="text-align: start;
+            color: black;
+            font-size: 15px;
+            font-family: 'PT_Sans_Bold';">
+                Hai, Akshay Mohan
+            </ion-title>
+
+            <div>
+                <!-- <ion-badge style="position: absolute;
+                border-radius: 50%;
+                height: 20px;
+                width: 20px;
+                --background: #f16a9b;">6</ion-badge> -->
+                <ion-icon name="notifications" color="dark" style="font-size: 25px; margin-right: 15px;"></ion-icon>
+                <!-- <img src="../../assets/icon/icons8-notification-48.png" alt="" style="height: 30px;
+                margin-right: 20px;" routerLink="/notification"> -->
+            </div>
+        </div>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <div style="display: flex; align-items: center; justify-content: space-around;">
+            <ion-icon name="location-outline" slot="start" style="color: red;
+            font-size: 30px;"></ion-icon>
+            <div style="text-align: start;
+            position: relative;
+            right: 35px;">
+                <h6 style="color: red;
+                font-family: 'PT_Sans_Bold';">Anchal</h6>
+                <ion-note color="dark" style="font-family: 'PT_Sans_Bold';">Kollam, Kerala 691309</ion-note>
+            </div>
+            <ion-avatar slot="end" style="height: 50px;
+            width: 50px;
+            border: 1px solid lightgrey;
+            padding: 1px;">
+                <img src="../../assets/image/person-icon.png" alt="">
+            </ion-avatar>
+        </div>
+
+        <div style="text-align: start;
+        padding: 5px 0px 5px 10px;">
+            <h1 style="margin: 0px;
+            color: black;
+            font-family: 'PT_Sans_Bold';">What would you</h1>
+            <h1 style="margin: 0px;
+            color: black;
+            font-family: 'PT_Sans_Bold';">like to eat?</h1>
+        </div>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="header-banner">
+        <img src="../../assets/image/meat-hd.jpeg">
+        <!-- <ion-slides loop="true" [options]="slideOpts">
+            <ion-slide>
+                <img src="../../assets/image/Sampleimages/img1.jpeg" alt="" style="padding: 5px 5px 5px 5px;
+                border-radius: 20px;">
+            </ion-slide>
+
+            <ion-slide>
+                <img src="../../assets/image/Sampleimages/img2.png" alt="" style="padding: 5px 5px 5px 5px;
+                border-radius: 20px;">
+            </ion-slide>
+
+            <ion-slide>
+                <img src="../../assets/image/Sampleimages/img3.jpeg" alt="" style="padding: 5px 5px 5px 5px;
+                border-radius: 20px;">
+            </ion-slide>
+
+            <ion-slide>
+                <img src="../../assets/image/Sampleimages/img4.jpeg" alt="" style="padding: 5px 5px 5px 5px;
+                border-radius: 20px;">
+            </ion-slide>
+
+            <ion-slide>
+                <img src="../../assets/image/Sampleimages/img5.jpeg" alt="" style="padding: 5px 5px 5px 5px;
+                border-radius: 20px;">
+            </ion-slide>
+
+            <ion-slide>
+                <img src="../../assets/image/Sampleimages/img6.jpeg" alt="" style="padding: 5px 5px 5px 5px;
+                border-radius: 20px;">
+            </ion-slide>
+
+        </ion-slides> -->
+    </div>
+
+
+    <div class="category-container" [style]="'background-image: url('+this.blurBg[0]+')'">
+        <h5 style="margin-top: 0px;">Shop by category</h5>
+        <div *ngFor="let c of category" class="looping">
+            <img src="../../assets/icon/meat.png" alt="">
+            <p>Meat</p>
+        </div>
+    </div>
+
+    <div class="category-container" [style]="'background-image: url('+this.blurBg[1]+')'">
+        <h5 style="margin-top: 0px;">Featured Products</h5>
+        <div style="display: flex; align-items: center; overflow-x: overlay;">
+            <div *ngFor="let c of products" class="looping">
+                <img src="../../assets/icon/meat.png" alt="">
+                <p>Meat</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="category-container" [style]="'background-image: url('+this.blurBg[2]+')'">
+        <div style="display: flex;
+        align-items: center;
+        justify-content: space-between;">
+            <h5 style="margin-top: 0px;">Top Deals</h5>
+            <p style="color: #205449 !important;">View all</p>
+        </div>
+        <div style="display: flex; align-items: center; overflow-x: overlay;">
+
+            <div *ngFor="let c of deals" class="looping">
+                <img src="../../assets/icon/meat.png" alt="">
+                <p>Meat</p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- <div>
+
+        <H4 style="background: #afb3be;
+        border-radius: 0px 20px 20px 0px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        padding: 0px 15px;
+        font-family: 'Fredoka_One';
+        width: 210px;
+        border-right: 5px solid #494848;">Our Products</H4>
+
+
+        <div style="padding: 10px;" *ngFor="let p of productDetails; let i = index;" (click)="gotoPage(p)">
+            <div>
+                <div style="display: flex;
+                align-items: center;
+                justify-content: space-around;
+                position: absolute;
+                right: 10px;">
+                    <div style="padding: 10px;
+                    background: #0000006b;
+                    ">
+                        <ion-icon name="heart" style="color: white;
+                        font-size: 2rem;" (click)="addToWishlist(p, i)"></ion-icon>
+                    </div>
+
+                </div>
+                <img src="../../assets/image/Sampleimages/img3.jpeg" alt="">
+            </div>
+            <div style="background: #040202b8;
+          border-radius: 0px 0px 10px 10px;
+          padding: 10px;">
+                <p style="margin: 0px; font-family: 'Fredoka_One'; color: white; font-size: 20px;"> {{p.product}} </p>
+                <span style="color: white;">₹</span> <span style="color: white; font-family: 'PT_Sans_Bold';"> {{p.rate}} </span> <span style="color: white;">₹</span> <span style="color: white; font-family: 'PT_Sans_Bold';"> {{p.offer}} </span>
+                <p style="margin: 0px; color: white; font-family: 'PT_Sans_Bold';"> {{p.quantity}} </p>
+                <!-- <div style="display: flex; justify-content: space-evenly;">
+                    <ion-button shape="round" size="small" (click)="addToCart(p, i)">Add To Cart</ion-button>
+                    <ion-button shape="round" size="small" (click)="buyNow(p)">Buy Now</ion-button>
+                </div> -->
+    <!-- </div>
+        </div>
+
+    </div> -->
+
+</ion-content>

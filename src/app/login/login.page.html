@@ -1,0 +1,54 @@
+<ion-content>
+
+    <div style="padding: 20% 12% 0% 12%;">
+        <div>
+
+            <div style="text-align: center;">
+                <img src="../../assets/image/chef.jpeg" alt="" style="border-radius: 50%;
+                height: 110px;
+                width: 110px;">
+                <H1 style="color: black;
+                margin: 5px 0px 40px 0px;
+                font-family: 'Lobster-Regular';
+                font-size: 35px;">Yummy Slice</H1>
+            </div>
+            <form [formGroup]="loginForm" (ngSubmit)="login()">
+
+                <div class="input-field-container">
+                    <div>
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </div>
+                    <div>
+                        <ion-input placeholder="Email" type="email" formControlName="email" autocapitalize="true" autofill="false" autocomplete="false"></ion-input>
+                    </div>
+                </div>
+
+                <div class="input-field-container">
+                    <ion-icon name="key-outline"></ion-icon>
+                    <ion-input placeholder="Password" type="password" formControlName="password" autocapitalize="true" autofill="false"></ion-input>
+                </div>
+
+                <div class="remember-me-container">
+                    <ion-checkbox [(ngModel)]="isChecked" (ionChange)="onMyBooleanChange()" [ngModelOptions]="{standalone: true}"></ion-checkbox>
+                    <H6>Remember Password</H6>
+                </div>
+
+                <div class="forgot-password-container">
+                    <ion-button shape="round" type="submit"> Login </ion-button>
+                    <H6 routerLink="/forgot-password">Forgot Password?</H6>
+                </div>
+            </form>
+
+            <div class="bottom-container">
+                <div class="bottom-content-container">
+                    <H6>Don't have account ?</H6>
+                    <H3>Register</H3>
+                </div>
+                <div>
+                    <img src="../../assets/icon/reg-ic.png" alt="" routerLink="/register" class="bottom-forward-icon">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</ion-content>

@@ -1,0 +1,78 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button icon="chevron-back"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Edit Profile</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+    <div style="background-image: linear-gradient(to right, #930b3d 10%, #350B40 80%);
+  padding: 30px 20px;
+  margin: 10px;
+  border-radius: 10px;">
+
+        <form [formGroup]="editProfileForm" (ngSubmit)="updateProfile()">
+
+            <div class="input-field-container">
+                <ion-input placeholder="User Name" formControlName="username" type="text" [value]="this.userDetails.username" [readonly]="true"></ion-input>
+                <img src="../../assets/icon/reg-ic1.png" alt="" style="height: 40px; width: 40px;">
+            </div>
+
+            <!-- <div class="input-field-container">
+                <ion-input placeholder="Gender" formControlName="gender" type="text" autocapitalize="true" autofill="false"></ion-input>
+                <img src="../../assets/icon/reg-ic1.png" alt="" style="height: 40px; width: 40px;">
+            </div> -->
+
+            <div class="input-field-container">
+                <ion-input placeholder="Email" formControlName="email" type="email" [value]="this.userDetails.email" [readonly]="true"></ion-input>
+                <img src="../../assets/icon/reg-ic1.png" alt="" style="height: 40px; width: 40px;">
+            </div>
+
+            <div class="input-field-container">
+                <ion-input type="text" placeholder="District" formControlName="district" [value]="this.userDetails.district" [readonly]="true">
+                </ion-input>
+                <img src="../../assets/icon/reg-ic1.png" alt="" style="height: 40px; width: 40px;">
+            </div>
+
+            <div class="input-field-container">
+                <ion-input placeholder="Home Town / City" formControlName="city" type="text" [value]="this.userDetails.city" [readonly]="true"></ion-input>
+                <img src="../../assets/icon/reg-ic1.png" alt="" style="height: 40px; width: 40px;">
+            </div>
+
+            <div class="input-field-container">
+                <ion-input placeholder="Alternate Mobile Number" formControlName="alternate" type="number"></ion-input>
+                <img src="../../assets/icon/reg-ic1.png" alt="" style="height: 40px; width: 40px;">
+            </div>
+
+            <div class="input-field-container">
+                <ion-input placeholder="Mobile Number" formControlName="phone" type="number" [value]="this.userDetails.phone" [readonly]="true"></ion-input>
+                <img src="../../assets/icon/reg-ic1.png" alt="" style="height: 40px; width: 40px;">
+            </div>
+
+            <div class="input-field-container">
+                <ion-textarea placeholder="Address" formControlName="address" type="text" autocapitalize="true" autofill="false"></ion-textarea>
+                <img src="../../assets/icon/reg-ic1.png" alt="" style="height: 40px; width: 40px;">
+            </div>
+
+            <div class="input-field-container">
+                <ion-input placeholder="Landmark" formControlName="landmark" type="text" autocapitalize="true" autofill="false"></ion-input>
+                <img src="../../assets/icon/reg-ic1.png" alt="" style="height: 40px; width: 40px;">
+            </div>
+
+            <div class="input-field-container">
+                <ion-input placeholder="Pincode" formControlName="pincode" type="number" value="691306"></ion-input>
+                <img src="../../assets/icon/reg-ic1.png" alt="" style="height: 40px; width: 40px;">
+            </div>
+
+            <div style="text-align: center">
+                <ion-button shape="round" type="submit">Proceed To Update</ion-button>
+            </div>
+
+        </form>
+
+    </div>
+
+</ion-content>

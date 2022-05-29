@@ -1,0 +1,122 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+
+        <div style="display: flex; align-items: center;">
+            <div>
+                <ion-buttons>
+                    <ion-menu-button>
+                        <ion-icon name="menu" color="dark"></ion-icon>
+                    </ion-menu-button>
+                </ion-buttons>
+            </div>
+
+            <div>
+                <ion-title>My Cart</ion-title>
+            </div>
+        </div>
+
+
+    </ion-toolbar>
+</ion-header>
+
+<!-- <ion-header class="ion-no-border">
+    <ion-toolbar>
+        <div style="display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px 5px 20px;">
+            <H5 style="margin: 0px;
+      font-family: 'PT_Sans_Bold'; color: white;">Cart Items (0)</H5>
+            <p style="margin: 0px; color: white; font-family: 'PT_Sans_Bold';">Rs: 0</p>
+        </div>
+    </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+
+    <div>
+        <div *ngFor="let c of cartItems; let i = index;" style="display: flex;
+        align-items: center;
+        padding: 20px 0px 20px 0px;
+        justify-content: space-evenly;
+        margin: 15px;
+        box-shadow: 1px 1px 10px 1px #9e9e9e;
+        border-radius: 5px;" [style.background]="c.seen_status==='0' ? '#48829E' : ''">
+            <div style="width: 60px;
+            height: 60px;">
+                <!-- <img *ngIf="c.seen_status==='0'" src="../../assets/icon/bell.png" alt="" style="height: 50px;
+            width: 50px;">
+                <img *ngIf="c.seen_status!=='0'" src="../../assets/icon/bell1.png" alt="" style="height: 50px;
+                            width: 50px;"> -->
+                <img src="../../assets/image/Sampleimages/img1.jpeg" alt="" style="height: 55px;
+                width: 55px;
+                object-fit: cover;">
+            </div>
+            <div style="margin: 0px 20px 0px 5px;">
+                <p style="margin: 0px; color: black;
+            font-family: 'Fredoka_One';"> {{c.name}} </p>
+                <p style="color: black;
+                font-size: 12px;
+                letter-spacing: 1px;
+                font-family: 'PT_Sans_Bold';"> {{c.quantity}} </p>
+                <p style="color: black;
+                font-size: 12px;
+                letter-spacing: 1px;
+                font-family: 'PT_Sans_Bold';"> {{c.stoke_status}} </p>
+                <p style="margin: 0px;
+                color: black;
+                font-size: 15px;
+                font-weight: 600;
+                letter-spacing: 2px;
+                font-family: 'Fredoka_One';"> Rs:{{c.rate}} </p>
+                <div style="display: flex; align-items: center; margin-top: 15px;">
+                    <!-- <ion-button shape="round" size="small" style="height: 30px;
+                    --border-radius: 50%;"> -->
+                    <ion-icon name="add" style="color: white;
+                    background-image: linear-gradient(to bottom, #E48720 10%, #D83128 80%);
+                    border-radius: 50%;
+                    height: 25px;
+                    width: 25px;" (click)="toIncrement(c,i)"></ion-icon>
+                    <!-- </ion-button> -->
+
+                    <H6 style="margin: 0px 10px 0px 10px;
+                    color: black;
+                    font-weight: 600;"> {{c.product_count}} </H6>
+
+                    <!-- <ion-button shape="round" size="small" style="height: 30px;
+                    --border-radius: 50%;"> -->
+                    <ion-icon name="remove" style="color: white;
+                    background-image: linear-gradient(to bottom, #E48720 10%, #D83128 80%);
+                    border-radius: 50%;
+                    height: 25px;
+                    width: 25px;" (click)="toDecrement(c,i)"></ion-icon>
+                    <!-- </ion-button> -->
+                </div>
+            </div>
+
+            <div style="background-color: grey;
+            border-radius: 50%;">
+                <img src="../../assets/icon/dlt1.png" alt="" style="height: 50px;
+                width: 53px;" (click)="deleteProduct(c,i)">
+            </div>
+        </div>
+    </div>
+
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar>
+        <div style=" margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;">
+            <div>
+                <p>Total</p>
+                <p>Rs: 299</p>
+            </div>
+            <ion-button shape="round" expand="block" style="--background: linear-gradient(to bottom, #E48720 10%, #D83128 80%);
+        ">CheckOut</ion-button>
+        </div>
+
+    </ion-toolbar>
+</ion-footer>

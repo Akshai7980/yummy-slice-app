@@ -1,0 +1,85 @@
+// ion-content {
+//     --background: linear-gradient(to bottom, #930b3d 10%, #350B40 80%);
+// }
+
+.input-field-container {
+    display: flex;
+    padding: 5px 5px 5px 5px;
+    background: #9e9e9e80;
+    align-items: center;
+    border-radius: 30px;
+    border: 1px solid black;
+    margin-bottom: 15px;
+    height: 50px;
+}
+
+ion-input {
+    font-family: 'Fredoka_One';
+    letter-spacing: 1px;
+    color: black;
+}
+
+ion-checkbox {
+    margin-right: 10px;
+    --border-color: #e38120;
+    --background-checked: #d83128;
+    --border-color-checked: #e38120;
+}
+
+// ion-button {
+//     --background: linear-gradient(to bottom, #E48720 10%, #D83128 80%);
+//     font-family: 'Fredoka_One';
+//     --padding-start: 40px;
+//     --padding-end: 40px;
+//     height: 43px;
+//     font-size: 18px;
+//     --box-shadow: none;
+// }
+
+.remember-me-container {
+    display: flex;
+    margin: 25px 0px 0px 0px;
+    color: black;
+}
+
+.forgot-password-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.bottom-container {
+    display: flex;
+    float: right;
+    margin-top: 35%;
+}
+
+.bottom-content-container {
+    margin-right: 15px;
+}
+
+H6 {
+    margin: 0px;
+    color: black;
+    font-family: 'PT_Sans_Bold';
+}
+
+H3 {
+    margin: 0px;
+    float: right;
+    color: #ef621f;
+    font-family: 'Fredoka_One';
+}
+
+.bottom-forward-icon {
+    height: 35px;
+    width: 35px;
+}
+
+ion-icon {
+    font-size: 25px;
+    color: #ef621f;
+    margin-left: 7px;
+    margin-right: 7px;
+}

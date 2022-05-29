@@ -1,0 +1,23 @@
+ion-button {
+    text-transform: none;
+    --border-color: linear-gradient(to bottom, #E48720 10%, #D83128 80%);
+    --color: white;
+    --box-shadow: transparent;
+}
+
+.input-field-container {
+    display: flex;
+    padding: 5px 5px 5px 5px;
+    background: #9e9e9e80;
+    align-items: center;
+    border-radius: 30px;
+    border-bottom: 2.5px solid black;
+    margin-bottom: 10px;
+    height: 50px;
+}
+
+ion-input {
+    font-family: 'Fredoka_One';
+    letter-spacing: 1px;
+    color: white;
+}

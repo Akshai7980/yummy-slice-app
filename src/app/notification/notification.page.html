@@ -1,0 +1,38 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button icon="chevron-back" defaultHref="/tabs/tab3"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Notification ({{this.notificationDetails?.length}}) </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div>
+        <div *ngFor="let n of notificationDetails; let i = index;" style="display: flex;
+    align-items: center;
+    justify-content: space-between;
+     /* border-bottom: .5px solid #48829E; */
+     " 
+      (click)="getNotch(n)">
+            <div style="width: 50px;
+        height: 50px;
+        margin: 15px;">
+                <img src="../../assets/icon/bell1.png" alt="" style="height: 50px; width: 50px;">
+            </div>
+            <div style="margin: 0px 20px 0px 5px;">
+                <p style="margin: 0px;"> {{n.title}} </p>
+                <p style="margin: 0px;
+            font-size: 12px;
+            letter-spacing: 1px;"> {{n.message}} </p>
+                <p style="margin: 0px; float: right;
+            font-size: 10px;
+            letter-spacing: 1px;"> {{n.timestamb | date}} </p>
+            </div>
+        </div>
+    </div>
+
+         <!-- [style.background]="n.seen_status==='0' ? '#48829E' : ''" -->
+
+</ion-content>

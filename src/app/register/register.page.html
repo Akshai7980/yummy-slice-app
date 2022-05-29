@@ -1,0 +1,60 @@
+<ion-content>
+
+    <div style="padding: 3% 12% 0% 12%;">
+
+        <div>
+            <form [formGroup]="registrationForm" (ngSubmit)="register()">
+
+                <div style="text-align: center;">
+                    <img src="../../assets/image/chef.jpeg" alt="" style="border-radius: 50%;
+                    height: 110px;
+                    width: 110px;">
+                    <H1 style="color: black;
+                    margin: 0px 0px 20px 0px;
+                    font-family: Lobster-Regular;
+                    font-size: 35px;">Yummy Slice</H1>
+                </div>
+
+                <div class="input-field-container">
+                    <ion-input placeholder="User Name" type="text" formControlName="username" autocapitalize="true" autofill="false"></ion-input>
+                    <img src="../../assets/icon/reg-ic1.png" alt="" style="height: 40px; width: 40px;">
+                </div>
+
+                <div class="input-field-container">
+                    <ion-input placeholder="Email" type="email" formControlName="email" autocapitalize="true" autofill="false"></ion-input>
+                    <img src="../../assets/icon/reg-ic1.png" alt="" style="height: 40px; width: 40px;">
+                </div>
+
+                <div class="input-field-container">
+                    <ion-input placeholder="Home Town / City" type="text" formControlName="landmark" [readonly]="true"></ion-input>
+                    <img src="../../assets/icon/reg-ic1.png" alt="" style="height: 40px; width: 40px;">
+                </div>
+
+                <div class="input-field-container">
+                    <ion-input placeholder="Mobile Number" type="number" formControlName="mobileNumber" autocapitalize="true" autofill="false"></ion-input>
+                    <img src="../../assets/icon/reg-ic1.png" alt="" style="height: 40px; width: 40px;">
+                </div>
+
+                <div class="input-field-container">
+                    <ion-input placeholder="Password" type="password" formControlName="password" autocapitalize="true" autofill="false"></ion-input>
+                    <img src="../../assets/icon/reg-ic1.png" alt="" style="height: 40px; width: 40px;">
+                </div>
+
+                <div class="forgot-password-container">
+                    <ion-button shape="round" type="submit"> Register </ion-button>
+                </div>
+
+                <div class="bottom-container">
+                    <div class="bottom-content-container">
+                        <H6>Already have an account ?</H6>
+                        <H3>Login</H3>
+                    </div>
+                    <div>
+                        <img src="../../assets/icon/reg-ic.png" alt="" routerLink="/login" class="bottom-forward-icon">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</ion-content>

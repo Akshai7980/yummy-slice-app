@@ -1,0 +1,15 @@
+<ion-content>
+  <div style="text-align: center;
+  padding: 15px;">
+    <img src="../../../assets/image/attention.jpeg" alt="" style="height: 80px;">
+    <h4>Attention!</h4>
+    <p>You are not a registered user in yummy slice, so first you need to registered to yummy slice then only you can update your profile</p>
+
+    <div style="display: flex;
+    justify-content: space-evenly;
+    align-items: center;">
+      <ion-button shape="round" routerLink="/login">Login</ion-button>
+      <ion-button shape="round" (click)="this.control.modalController.dismiss()">close</ion-button>
+    </div>
+  </div>
+</ion-content>

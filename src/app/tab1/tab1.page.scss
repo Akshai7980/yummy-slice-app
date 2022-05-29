@@ -1,0 +1,21 @@
+.header-banner {
+    height: 200px;
+    min-height: 200px;
+    background: transparent;
+}
+
+.slide-zoom {
+    height: 100%;
+}
+
+ion-slides {
+    height: 200px;
+}
+
+ion-button {
+    text-transform: none;
+    --background: linear-gradient(to bottom, #E48720 10%, #D83128 80%);
+    height: 50px;
+    font-size: 20px;
+    --box-shadow: transparent;
+}
